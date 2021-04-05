@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name batteryprotector-rescue)(type Legacy)(uri ${KIPRJMOD}/batteryprotector-rescue.lib)(options "")(descr ""))
+)
