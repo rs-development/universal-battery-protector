@@ -310,50 +310,6 @@ F 3 "~" H 6000 7100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H1
-U 1 1 6025B2E9
-P 1000 6400
-F 0 "H1" H 1100 6446 50  0000 L CNN
-F 1 "MountingHole" H 1100 6355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1000 6400 50  0001 C CNN
-F 3 "~" H 1000 6400 50  0001 C CNN
-	1    1000 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 6025BA60
-P 1000 6600
-F 0 "H2" H 1100 6646 50  0000 L CNN
-F 1 "MountingHole" H 1100 6555 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1000 6600 50  0001 C CNN
-F 3 "~" H 1000 6600 50  0001 C CNN
-	1    1000 6600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 6025C1C4
-P 1000 6800
-F 0 "H3" H 1100 6846 50  0000 L CNN
-F 1 "MountingHole" H 1100 6755 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1000 6800 50  0001 C CNN
-F 3 "~" H 1000 6800 50  0001 C CNN
-	1    1000 6800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 6025C1CA
-P 1000 7000
-F 0 "H4" H 1100 7046 50  0000 L CNN
-F 1 "MountingHole" H 1100 6955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965" H 1000 7000 50  0001 C CNN
-F 3 "~" H 1000 7000 50  0001 C CNN
-	1    1000 7000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Graphic:Logo_Open_Hardware_Small LOGO2
 U 1 1 6004B459
 P 4950 7100
@@ -691,17 +647,6 @@ Text Label 1200 5000 2    50   ~ 0
 LED_IN
 Text Label 10100 1250 0    50   ~ 0
 LED_IN
-$Comp
-L Connector:AVR-ISP-6 J1
-U 1 1 607432D6
-P 8900 3400
-F 0 "J1" H 8571 3496 50  0000 R CNN
-F 1 "AVR-ISP-6" H 8571 3405 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 8650 3450 50  0001 C CNN
-F 3 " ~" H 7625 2850 50  0001 C CNN
-	1    8900 3400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10100 1250 9450 1250
 Text Label 9750 1250 0    50   ~ 0
@@ -922,4 +867,41 @@ Wire Wire Line
 Connection ~ 5150 950 
 Wire Wire Line
 	5300 1050 5300 1200
+$Comp
+L Device:R R7
+U 1 1 6073B9ED
+P 9850 3200
+F 0 "R7" H 9920 3246 50  0000 L CNN
+F 1 "33k" H 9920 3155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9780 3200 50  0001 C CNN
+F 3 "~" H 9850 3200 50  0001 C CNN
+	1    9850 3200
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 6073D1A1
+P 9850 3050
+F 0 "#PWR01" H 9850 2900 50  0001 C CNN
+F 1 "+5V" H 9865 3223 50  0000 C CNN
+F 2 "" H 9850 3050 50  0001 C CNN
+F 3 "" H 9850 3050 50  0001 C CNN
+	1    9850 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 3500 9850 3500
+Wire Wire Line
+	9850 3500 9850 3350
+$Comp
+L Connector:AVR-ISP-10 J1
+U 1 1 60743E13
+P 8900 3400
+F 0 "J1" H 8570 3496 50  0000 R CNN
+F 1 "AVR-ISP-10" H 8570 3405 50  0000 R CNN
+F 2 "Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical" V 8650 3450 50  0001 C CNN
+F 3 " ~" H 7625 2850 50  0001 C CNN
+	1    8900 3400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
